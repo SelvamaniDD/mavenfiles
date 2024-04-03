@@ -17,9 +17,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-	<sonar.host.url>http://44.204.10.151:9000/</sonar.host.url>
+	<sonar.host.url>http://34.238.80.140:9000/</sonar.host.url>
 	<sonar.login>admin</sonar.login>
-	<sonar.password>admin</sonar.password>
+	<sonar.password>password</sonar.password>
   </properties>
 
   <dependencies>
@@ -30,10 +30,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<properties>
-	<sonar.host.url>http://http://34.238.80.140:9000/<sonar.host.url>
-	<sonar.login>admin</sonar.login>
-	<sonar.password>password</sonar.password>
+	
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
