@@ -7,7 +7,7 @@
   <groupId>devops</groupId>
   <artifactId>code</artifactId>
   <version>1.0.0</version>
-  <packaging>jar</packaging>
+  <packaging>ear</packaging>
 
   <name>Test_job_ops.1</name>
   <!-- FIXME change it to the project's website -->
