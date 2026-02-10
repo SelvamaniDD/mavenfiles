@@ -2,6 +2,4 @@
 create a classic token and authenticate with it 
 you will be able to upload a file to github.com
 
-# after creating branch in local repo , if you want to push to remote repo 
-git push --set-upstream origin branch name
 
