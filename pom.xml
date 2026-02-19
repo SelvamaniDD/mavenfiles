@@ -17,9 +17,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
-	<sonar.host.url>http://35.174.211.202:9000/</sonar.host.url>
+    <sonar.host.url>http://13.49.244.35:9000</sonar.host.url>
 	<sonar.login>admin</sonar.login>
-	<sonar.password>password</sonar.password>
+	<sonar.password>passw0rd</sonar.password>
   </properties>
 
   <dependencies>
@@ -45,13 +45,10 @@
           <version>3.0.2</version>
         </plugin>
         <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>2.4</version>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-        </configuration>
-        </plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.8.1</version>
+</plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.19.1</version>
@@ -60,10 +57,14 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
         </plugin> -->
-		<plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
+	<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-war-plugin</artifactId>
+    <version>3.3.1</version> <!-- Use a recent version -->
+    <configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </configuration>
+</plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
@@ -81,7 +82,14 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
-      </plugins>
+	<plugin>
+ 	<groupId>org.apache.maven.plugins</groupId>
+ 	<artifactId>maven-surefire-plugin</artifactId>
+ 	<configuration>
+    	<argLine>--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+  	</configuration>
+	</plugin>
+	</plugins>
     </pluginManagement>
   </build>
 </project>
