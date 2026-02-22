@@ -1,6 +1,0 @@
-projectKey=devops:code
-serverUrl=http://13.49.244.35:9000
-serverVersion=9.6.1.59531
-dashboardUrl=http://13.49.244.35:9000/dashboard?id=devops%3Acode
-ceTaskId=AZx248bG-2RKWMLPOmIw
-ceTaskUrl=http://13.49.244.35:9000/api/ce/task?id=AZx248bG-2RKWMLPOmIw

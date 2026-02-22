@@ -15,8 +15,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <sonar.host.url>http://13.49.244.35:9000</sonar.host.url>
 	<sonar.login>admin</sonar.login>
 	<sonar.password>passw0rd</sonar.password>
@@ -45,10 +45,10 @@
           <version>3.0.2</version>
         </plugin>
         <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-compiler-plugin</artifactId>
-  <version>3.8.1</version>
-</plugin>
+  	<groupId>org.apache.maven.plugins</groupId>
+  	<artifactId>maven-compiler-plugin</artifactId>
+  	<version>3.8.1</version>
+	</plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.19.1</version>
@@ -59,12 +59,21 @@
         </plugin> -->
 	<plugin>
     <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-war-plugin</artifactId>
-    <version>3.3.1</version> <!-- Use a recent version -->
-    <configuration>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
-    </configuration>
-</plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.12.1</version> <!-- Use a recent version -->
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+		</configuration>
+	</plugin>
+	<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version> <!-- Match the version in your error message -->
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+	</configuration>
+	</plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
